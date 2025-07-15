@@ -9,6 +9,10 @@ jobs:
   build:
     name: Build docker image
     runs-on: ubuntu-latest
+    permissions:
+      attestations: write
+      contents: read
+      packages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
